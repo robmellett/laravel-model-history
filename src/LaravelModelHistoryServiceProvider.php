@@ -2,9 +2,9 @@
 
 namespace RobMellett\LaravelModelHistory;
 
+use RobMellett\LaravelModelHistory\Commands\LaravelModelHistoryCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use RobMellett\LaravelModelHistory\Commands\LaravelModelHistoryCommand;
 
 class LaravelModelHistoryServiceProvider extends PackageServiceProvider
 {
