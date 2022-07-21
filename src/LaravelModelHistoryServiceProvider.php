@@ -17,9 +17,6 @@ class LaravelModelHistoryServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-model-history')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-model-history_table')
-            ->hasCommand(LaravelModelHistoryCommand::class);
+            ->hasMigration('create_laravel-model-history_table');
     }
 }

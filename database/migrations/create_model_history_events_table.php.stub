@@ -1,0 +1,31 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up()
+    {
+        Schema::create('history_events', function (Blueprint $table) {
+            $table->id();
+            $table->bigInteger('historize_id')->index();
+            $table->string('historize_type')->index();
+            $table->string('event_name')->index();
+            $table->jsonb('original');
+            $table->jsonb('changes');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('history_events');
+    }
+};
