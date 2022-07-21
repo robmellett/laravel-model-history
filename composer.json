@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "robmellett/laravel-model-history",
+    "description": "A simple trait to add to your models so you can store CREATED and UPDATED differences",
     "keywords": [
-        ":vendor_name",
+        "robmellett",
         "laravel",
-        ":package_slug"
+        "laravel-model-history"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/robmellett/laravel-model-history",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Rob Mellett",
+            "email": "dev@robmellett.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "RobMellett\\LaravelModelHistory\\": "src",
+            "RobMellett\\LaravelModelHistory\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "RobMellett\\LaravelModelHistory\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -51,15 +51,19 @@
         "format": "vendor/bin/pint"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "RobMellett\\LaravelModelHistory\\LaravelModelHistoryServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelModelHistory": "RobMellett\\LaravelModelHistory\\Facades\\LaravelModelHistory"
             }
         }
     },

@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace RobMellett\LaravelModelHistory\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelModelHistoryCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-model-history';
 
     public $description = 'My command';
 
