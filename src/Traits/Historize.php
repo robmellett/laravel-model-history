@@ -42,7 +42,6 @@ trait Historize
     }
 
     /**
-     * @param  string  $eventName
      * @return mixed
      */
     public function trackCustomEvent(string $eventName)
